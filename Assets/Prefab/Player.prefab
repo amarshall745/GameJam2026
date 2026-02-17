@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 3231657398508466529}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -199,13 +199,15 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.08, y: 1, z: -4.175}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3231657399535308845}
   - {fileID: 3231657398508466542}
   - {fileID: 3231657397979042474}
   - {fileID: 1528542951556733049}
+  - {fileID: 8089417593658524823}
+  - {fileID: 1908117121115777741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &3231657398570284746
@@ -247,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   gravityModifier: 2
-  jumpPower: 10
+  jumpPower: 7
   runSpeed: 14
   charCon: {fileID: 3231657398570284746}
   camTrans: {fileID: 3231657398508466542}
@@ -257,7 +259,9 @@ MonoBehaviour:
   groundCheckPoint: {fileID: 3231657397979042474}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
+  managers: {fileID: 8187921422312626890}
+  canTelepot: 0
 --- !u!114 &3231657398570284751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,8 +274,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244facf6e34aee34ba480f1c1eb1c498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmoPoint: {fileID: 0}
-  eRange: 0
+  playerController: {fileID: 3231657398570284746}
+  gizmoPoint: {fileID: 1528542951556733049}
+  pickUpRange: 5
+  interactRange: 6
+  holdingArea: {fileID: 6779679519473744699}
+  pickedUpItem: {fileID: 0}
+  holdingItem: 0
 --- !u!1 &3231657399535308844
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,3 +395,93 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6779679519473744699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8089417593658524823}
+  m_Layer: 0
+  m_Name: holding area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8089417593658524823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779679519473744699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3231657398570284747}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8187921422312626890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908117121115777741}
+  - component: {fileID: 184958415691122464}
+  - component: {fileID: 3763082741683816344}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1908117121115777741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187921422312626890}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.95678556, y: 8.124999, z: 1.1826373}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3231657398570284747}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184958415691122464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187921422312626890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbe473a0a7cffc45ba8032975399a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  pause: 0
+--- !u!114 &3763082741683816344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187921422312626890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f45fe889ee9a540b61e42739e267c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  levelToggled: 0
