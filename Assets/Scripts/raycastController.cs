@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 public class raycastController : MonoBehaviour
 {
     public CharacterController playerController;
     public Transform gizmoPoint;
-    public float pickUpRange;
+    public float pickUpRange, interactRange = 6f;
     public GameObject holdingArea, pickedUpItem;
     public bool holdingItem;
 
@@ -18,20 +19,24 @@ public class raycastController : MonoBehaviour
     {
         if (Input.GetKeyDown("e"))
         {
-            if (holdingItem)
-            {
-                pickUpItem();
-                return;
-            }
-
             var ray = new Ray(gizmoPoint.transform.position, gizmoPoint.transform.forward);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
                 hitPoint = hit.point;
                 hitGO = hit.transform.gameObject;
-
+                Debug.Log(hitGO);
                 float distance = Vector3.Distance(gameObject.transform.position, hit.point);
+
+                if (hitGO.GetComponent<Lock>() && distance <= interactRange)
+                {
+                    if (pickedUpItem.CompareTag("key"))
+                    {
+                        hitGO.GetComponent<Lock>().unLock(pickedUpItem);
+                        Destroy(pickedUpItem);
+                        pickedUpItem = null;
+                    }
+                }
 
                 if (distance <= pickUpRange)
                 {
@@ -42,6 +47,23 @@ public class raycastController : MonoBehaviour
                     }
                 }
 
+                if(distance <= interactRange)
+                {
+                    if (hitGO.CompareTag("activateAbility"))
+                    {
+                        gameObject.GetComponent<PlayerController>().enableAbility();
+                        Destroy(hitGO);
+                    }
+                }
+
+            }
+            else
+            {
+                if (holdingItem)
+                {
+                    pickUpItem();
+                    return;
+                }
             }
 
         }

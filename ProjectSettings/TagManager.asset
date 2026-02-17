@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - pistol
+  - key
+  - activateAbility
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Pickup
