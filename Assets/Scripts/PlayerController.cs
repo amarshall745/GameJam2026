@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject managers;
 
+    public bool canTelepot;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && canJump)
             {
                 moveInput.y = jumpPower;
-                canDoubleJump = true;
+                //canDoubleJump = true;
             }
             else if (canDoubleJump && Input.GetKeyDown(KeyCode.Space))
             {
@@ -97,10 +99,15 @@ public class PlayerController : MonoBehaviour
             camTrans.rotation = Quaternion.Euler(camTrans.rotation.eulerAngles + new Vector3(-mouseInput.y, 0f, 0f));
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && canTelepot)
         {
             managers.GetComponent<LevelManager>().toggleWorld();
         }
+    }
+
+    public void enableAbility()
+    {
+        canTelepot = true;
     }
 
 }
