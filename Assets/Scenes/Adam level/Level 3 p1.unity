@@ -1194,6 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 4
+  disableCollidersWhenHidden: 1
 --- !u!54 &49538414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1965,6 +1967,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1719569932363254, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 118081953}
+    - targetCorrespondingSourceObject: {fileID: 1719569932363254, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 118081958}
   m_SourcePrefab: {fileID: 100100000, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
 --- !u!1 &118081951 stripped
 GameObject:
@@ -2003,6 +2008,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4586611713910306, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
   m_PrefabInstance: {fileID: 118081950}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &118081958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118081951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 4
+  disableCollidersWhenHidden: 1
 --- !u!1 &118558863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,6 +4741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 4
+  disableCollidersWhenHidden: 1
 --- !u!54 &287189623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11836,7 +11857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4019230386164288, guid: a8c3c2fa6519fae4690d44a8ec308088, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.5
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 4019230386164288, guid: a8c3c2fa6519fae4690d44a8ec308088, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11844,7 +11865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4019230386164288, guid: a8c3c2fa6519fae4690d44a8ec308088, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.0000005
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4019230386164288, guid: a8c3c2fa6519fae4690d44a8ec308088, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15408,7 +15429,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Preasurepafe
   animator: {fileID: 454166352}
-  boolParam: on
+  onTrigger: on
+  offTrigger: off
+  weightTag: weight
+  offGraceTime: 0.08
 --- !u!65 &1016507088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20298,6 +20322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 4
+  disableCollidersWhenHidden: 1
 --- !u!54 &1384008203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20771,7 +20797,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Preasurepafe
   animator: {fileID: 1534207121}
-  boolParam: on
+  onTrigger: on
+  offTrigger: off
+  weightTag: weight
+  offGraceTime: 0.08
 --- !u!1001 &1403436083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21321,7 +21350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Preasurepafe
   animator: {fileID: 458580447}
-  boolParam: activated
+  onTrigger: on
+  offTrigger: off
+  weightTag: weight
+  offGraceTime: 0.08
 --- !u!65 &1440806672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23916,7 +23948,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Preasurepafe
   animator: {fileID: 898126254}
-  boolParam: on
+  onTrigger: on
+  offTrigger: off
+  weightTag: weight
+  offGraceTime: 0.08
 --- !u!65 &1635340358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24601,6 +24636,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1719569932363254, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1679400924}
+    - targetCorrespondingSourceObject: {fileID: 1719569932363254, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1679400919}
   m_SourcePrefab: {fileID: 100100000, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
@@ -24641,6 +24679,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4586611713910306, guid: 2f8e08a414723f3478184919435f67c0, type: 3}
   m_PrefabInstance: {fileID: 1679400916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679400924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679400917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 4
+  disableCollidersWhenHidden: 1
 --- !u!1001 &1683446661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29233,6 +29285,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1528542950749316599, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
+      propertyPath: canTelepot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3231657398570284747, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.58985
@@ -29276,18 +29332,6 @@ PrefabInstance:
     - target: {fileID: 3231657398570284748, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8089417593658524823, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8089417593658524823, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8089417593658524823, guid: 9f7025f7a35bac347866c3de4f9e8cbc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31149,7 +31193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Preasurepafe
   animator: {fileID: 1978369892}
-  boolParam: activated
+  onTrigger: on
+  offTrigger: off
+  weightTag: weight
+  offGraceTime: 0.08
 --- !u!65 &2139757605
 BoxCollider:
   m_ObjectHideFlags: 0
