@@ -47,11 +47,12 @@ public class raycastController : MonoBehaviour
             {
                 if (pickedUpItem != null && pickedUpItem.CompareTag("key"))
                 {
-                    hitGO.GetComponent<Lock>().unLock(pickedUpItem);
+                    hitGO.GetComponent<Lock>().unLock();
 
                     Destroy(pickedUpItem);
                     pickedUpItem = null;
                     holdingItem = false;
+
                 }
                 return;
             }
@@ -61,6 +62,12 @@ public class raycastController : MonoBehaviour
             {
                 GetComponent<PlayerController>().enableAbility();
                 Destroy(hitGO);
+                return;
+            }
+
+            if (distance <= interactRange && hitGO.GetComponent<NextLevel>())
+            {
+                hitGO.GetComponent<NextLevel>().changeLevel();
                 return;
             }
 

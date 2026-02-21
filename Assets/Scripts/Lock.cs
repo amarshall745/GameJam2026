@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+    [SerializeField] private string onTrigger = "opening";
+
     void Start()
     {
         
@@ -12,8 +15,9 @@ public class Lock : MonoBehaviour
         
     }
 
-    public void unLock(GameObject key)
+    public void unLock()
     {
-        Debug.Log("Opening gate");
+
+        animator.SetTrigger(onTrigger);
     }
 }

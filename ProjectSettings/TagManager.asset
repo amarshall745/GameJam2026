@@ -8,6 +8,7 @@ TagManager:
   - key
   - activateAbility
   - weight
+  - lever
   layers:
   - Default
   - TransparentFX

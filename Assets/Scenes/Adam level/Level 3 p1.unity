@@ -1196,6 +1196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
   visibleSceneBuildIndex: 4
   disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!54 &49538414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2022,6 +2023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
   visibleSceneBuildIndex: 4
   disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!1 &118558863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4743,6 +4745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
   visibleSceneBuildIndex: 4
   disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!54 &287189623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20324,6 +20327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
   visibleSceneBuildIndex: 4
   disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!54 &1384008203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20922,13 +20926,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1175005079664630, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1404773123}
   m_SourcePrefab: {fileID: 100100000, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
 --- !u!4 &1404773121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4358554759922430, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
   m_PrefabInstance: {fileID: 1404773120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1404773122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175005079664630, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
+  m_PrefabInstance: {fileID: 1404773120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404773123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404773122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4feef9fa5bbcd4e95be70f054ac7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextLevel
+  firstLevel: 0
+  secondLevel: 0
+  thirdLevel: 1
 --- !u!1 &1413050469
 GameObject:
   m_ObjectHideFlags: 0
@@ -24693,6 +24720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
   visibleSceneBuildIndex: 4
   disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!1001 &1683446661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27595,13 +27623,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1708773804151216, guid: f6982135a3b945544844575fc99b443c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865110599}
   m_SourcePrefab: {fileID: 100100000, guid: f6982135a3b945544844575fc99b443c, type: 3}
 --- !u!4 &1865110597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4095293771677448, guid: f6982135a3b945544844575fc99b443c, type: 3}
   m_PrefabInstance: {fileID: 1865110596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1865110598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1708773804151216, guid: f6982135a3b945544844575fc99b443c, type: 3}
+  m_PrefabInstance: {fileID: 1865110596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1865110599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865110598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.590967, y: 3.7585225, z: 0.19210938}
+  m_Center: {x: 3.69715, y: 1.4527719, z: -3.443006e-14}
 --- !u!1001 &1866214392
 PrefabInstance:
   m_ObjectHideFlags: 0

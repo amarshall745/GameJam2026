@@ -20350,8 +20350,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1175005079664630, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1404773122}
   m_SourcePrefab: {fileID: 100100000, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
+--- !u!1 &1404773121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175005079664630, guid: b6d6e17b4d591754f88c4ff48dabafc6, type: 3}
+  m_PrefabInstance: {fileID: 1404773120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1404773122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404773121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4feef9fa5bbcd4e95be70f054ac7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextLevel
+  firstLevel: 0
+  secondLevel: 0
+  thirdLevel: 1
 --- !u!1 &1413050469
 GameObject:
   m_ObjectHideFlags: 0
@@ -24269,6 +24292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842d95df5507a874ab8ef318ff40b67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroy
+  visibleSceneBuildIndex: 5
+  disableCollidersWhenHidden: 1
+  freezeRigidbodiesWhenHidden: 1
 --- !u!54 &1679400919
 Rigidbody:
   m_ObjectHideFlags: 0
